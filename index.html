@@ -5,25 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Portafolio De Trabajo</title>
+    <style>
+        /* Estilos en línea para mayor simplicidad */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9a9daf56;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .titulo {
+            font-size: 72px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .boton {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            background-color: #ccc; /* Color gris para los botones no-activos */
+            color: #fff;
+            text-align: center;
+            line-height: 300px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .boton:hover {
+            background-color: #2980b9; /* Cambio de color al hacer hover */
+        }
+
+        .no-activo {
+            background-color: #ccc; /* Color gris para los botones no-activos */
+            color: #fff; /* Cambio de color de texto a blanco */
+        }
+
+        .barras-laterales {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10px; /* Ancho de las barras laterales */
+            background-color: #000; /* Color negro para las barras laterales */
+        }
+
+        .izquierda {
+            left: 40px; /* Distancia de 20px desde el borde izquierdo */
+        }
+
+        .derecha {
+            right: 40px; /* Distancia de 20px desde el borde derecho */
+        }
+
+        .espacio-exterior {
+            background-color: #ccb385; /* Naranja para el espacio exterior */
+            flex-grow: 1;
+        }
+    </style>
 </head>
 <body>
-    <!-- Título centrado en la parte superior -->
-    <h1 class="titulo">Portafolio De Trabajo</h1>
-    
+    <!-- Título en la parte superior -->
+    <h1 class="titulo">Portafolio de Trabajo</h1>
+
+    <!-- Barras laterales -->
+    <div class="barras-laterales izquierda"></div>
+    <div class="barras-laterales derecha"></div>
+
     <!-- Contenedor de los botones -->
     <div class="botones">
-        <a href="colores.html" class="boton" id="activarColorPicker">Colores</a>
-        <a href="" class="boton no-activo">REED ME</a>
+        <a href="colores.html" class="boton" id="activarColorPicker">Teoria De Colores</a>
+        <a href="#" class="boton no-activo">LEEME</a>
+    </div>
+
+    <!-- Segunda línea de botones -->
+    <div class="botones">
         <a href="#" class="boton no-activo">Proyecto 2</a>
         <a href="#" class="boton no-activo">Proyecto 3</a>
     </div>
 
-    <script>
-        // Agregar un evento click al botón "Colores" para activar el color picker
-        document.getElementById("activarColorPicker").addEventListener("click", function() {
-            // Al hacer clic en el botón, almacenamos un valor en localStorage
-            localStorage.setItem("activarColorPicker", "true");
-        });
-    </script>
+    <!-- Espacio exterior con color naranja -->
+    <div class="espacio-exterior"></div>
+
+
 </body>
 </html>
