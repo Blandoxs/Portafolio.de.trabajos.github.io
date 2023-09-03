@@ -12,7 +12,65 @@ body {
     font-size: 24px;
     margin-top: 20px;
 }
+/* Estilo para el fondo */
+body.colores {
+    background: linear-gradient(135deg, #b0e0e6, #87ceeb); /* Cambia los valores de color a tu preferencia */
+    text-align: center; /* Para centrar el contenido */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+}
+/* Estilo para el fondo */
+body.colores {
+    background-color: #b0e0e6; /* Color de fondo */
+    text-align: center; /* Para centrar el contenido */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
 
+/* Estilo para los círculos */
+.circle {
+    position: absolute; /* Posición absoluta para que se superpongan */
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Altura del círculo */
+    border-radius: 50%; /* Forma circular */
+    opacity: 0.7; /* Opacidad del círculo */
+    animation: move 5s infinite ease-in-out; /* Animación para mover los círculos */
+}
+
+/* Estilo para los círculos de colores primarios */
+.circle.primary {
+    background-color: #FF0000; /* Color del círculo primario (rojo) */
+}
+
+/* Estilo para los círculos de colores secundarios */
+.circle.secondary {
+    background-color: #00FF00; /* Color del círculo secundario (verde) */
+}
+
+/* Estilo para los círculos de colores terciarios */
+.circle.tertiary {
+    background-color: #0000FF; /* Color del círculo terciario (azul) */
+}
+
+/* Animación para mover los círculos */
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}.color-picker {
+    background-color: #333333; /* Cambia el valor de color a tu preferencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+/* Resto de los estilos permanecen sin cambios */
 .botones {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +138,7 @@ h3 {
 
 /* modificar el color de la pag principal */
 body.index {
-    background-color: rgb(195, 233, 230);
+    background-color: rgb(67, 14, 138);
 }
 
 /* Estilos para la subventana (modal) */
@@ -132,7 +190,7 @@ iframe {
 -----------------------------------------------------------------------------------------
 /* Estilos para la página colores.html */
 body.colores {
-    background-color: gray; /* Cambia este valor a tu elección de color de fondo */
+    background-color: rgb(48, 137, 172); /* Cambia este valor a tu elección de color de fondo */
     display: flex;
     flex-direction: column;
     justify-content: center;
