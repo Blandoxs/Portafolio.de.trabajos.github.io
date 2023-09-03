@@ -14,6 +14,7 @@ function updateColors() {
     complementary.innerHTML = "";
     splitComplementary.innerHTML = "";
     analogous.innerHTML = "";
+    
 
     const rgbColor = hexToRgb(hexColor);
 
@@ -98,3 +99,31 @@ function createColorBox(container, color) {
     colorBox.className = "color-box";
     container.appendChild(colorBox);
 }
+// Obtener elementos del DOM
+const cuadroColores = document.getElementById('colores');
+const subventana = document.getElementById('subventana');
+const cerrarSubventanaBtn = document.getElementById('cerrarSubventana');
+const iframeSubventana = document.getElementById('iframeSubventana');
+
+// Mostrar la subventana cuando se hace clic en el cuadro "Colores"
+cuadroColores.addEventListener('click', () => {
+    subventana.style.display = 'block';
+    iframeSubventana.src = 'colores.html'; // Cargar colores.html en el iframe
+});
+
+// Cerrar la subventana cuando se hace clic en el botón de cerrar
+cerrarSubventanaBtn.addEventListener('click', () => {
+    subventana.style.display = 'none';
+    iframeSubventana.src = ''; // Vaciar la URL del iframe
+});
+// Obtener el elemento color-input
+
+// Establecer el valor inicial del color picker
+colorInput.value = "#FF0000"; // Puedes cambiar este valor al color deseado
+
+// Llamar al evento input del color picker para que se actualicen los colores al cargar la página
+colorInput.dispatchEvent(new Event('input'));
+
+
+// Mostrar el color picker automáticamente al cargar la página
+colorInput.click();
