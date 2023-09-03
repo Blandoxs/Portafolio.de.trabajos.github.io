@@ -9,7 +9,9 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
-            overflow: hidden;
+            padding: 20px;
+            border: 10px solid #333;
+            border-radius: 20px;
         }
 
         .contenedor {
@@ -64,26 +66,24 @@
 
         .figuras {
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .figuras-izquierda {
-            left: 0;
+            left: 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            margin-right: 50px;
         }
 
         .figuras-derecha {
-            right: 0;
+            right: 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            margin-left: 50px;
         }
 
         .figura {
