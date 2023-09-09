@@ -255,3 +255,19 @@ h3 {
     width: 100px;
     height: 30px;
 }
+/* Estilo del botón de la imagen */
+.image-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px; /* Añade espacio alrededor de la imagen para que parezca un botón */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+    cursor: pointer;
+  }
+  
+  /* Estilo para cambiar el color del botón al pasar el ratón por encima */
+  .image-button:hover {
+    background-color: #0056b3;
+  }
+  
