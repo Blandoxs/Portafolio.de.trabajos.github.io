@@ -1,136 +1,104 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Trabajo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 20px;
-            border: 10px solid #333;
-            border-radius: 20px;
-        }
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #fff;
-        }
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
 
-        .titulo {
-            font-size: 48px;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            margin-bottom: 50px;
-        }
+  <title>Title page</title>  
 
-        .botones {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .boton {
-            width: 200px;
-            height: 200px;
-            margin: 20px;
-            background-color: #2980b9;
-            color: #fff;
-            text-align: center;
-            line-height: 200px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 50%;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
-
-        .boton:hover {
-            background-color: #1a5276;
-        }
-
-        .no-activo {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .figuras {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .figuras-izquierda {
-            left: 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-        }
-
-        .figuras-derecha {
-            right: 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .figura {
-            width: 150px;
-            height: 150px;
-            background-color: #000;
-            transform: rotate(15deg);
-            margin: 10px;
-        }
-
-        .circulo {
-            border-radius: 50%;
-        }
-
-        .cuadrado {
-            border-radius: 5px;
-        }
-
-        .triangulo {
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        }
-
-        .estrella {
-            clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
-        }
-
-    </style>
+  <link href="./main.d8e0d294.css" rel="stylesheet">
 </head>
-<body>
-    <div class="contenedor">
-        <h1 class="titulo">Portafolio de Trabajo</h1>
-        <div class="botones">
-            <a href="colores.html" class="boton" id="activarColorPicker">Teoría de Colores</a>
-            <a href="Presentacion.html" class="boton id="activarPresentacion">LEEME</a>
-        </div>
-        <div class="botones">
-            <a href="#" class="boton no-activo">Proyecto 2</a>
-            <a href="#" class="boton no-activo">Proyecto 3</a>
-        </div>
-        <div class="figuras figuras-izquierda">
-            <div class="figura circulo"></div>
-            <div class="figura cuadrado"></div>
-        </div>
-        <div class="figuras figuras-derecha">
-            <div class="figura triangulo"></div>
-            <div class="figura estrella"></div>
-        </div>
+
+<body class="">
+
+<!-- Add your content of header -->
+<div class="background-color-layer" style="background-image: url('assets/images/img-01.jpg')"></div>
+<main class="content-wrapper">
+  <header class="white-text-container section-container">
+    <div class="text-center">
+      <h1>Portafolio</h1>
+      <p>Programador En Progreso</p>
     </div>
+  </header>
+
+  <!-- Add your site or app content here -->
+  <div class="card">
+    
+    <div class="card-block">
+      <h2>Trabajo</h2>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="text-center">
+                  <a href="Presentacion.html" class="image-button" style="display: inline-block; margin-right: 10px;">
+                    <img src="presentacion.jpg" alt="Presentacion" width="100" height="100">
+                  </a>
+                  <h3 class="h5">                         Presentacion</h3>
+                  <div class="carousel-caption">
+                    
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-center">
+                  <a href="Colores.html" class="image-button" style="display: inline-block; margin-right: 10px;">
+                    <img src="Teoría del color.webp" alt="Teoria Del Colors" width="100" height="100">
+                  </a>
+                  <h3 class="h5">                         Teoria Del Color</h3>
+                  <div class="carousel-caption">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+   
+          
+
+        <div class="item">
+          <img src="proximamente.png" alt="Teoria Del Colors" width="100" height="100">
+          <div class="col-md-6"></div>
+          <div class="carousel-caption">
+            <h3 class="h5">Unidad 2</h3>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+    </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     scrollRevelation('.card');
+  });
+</script>
+
+<script type="text/javascript" src="./main.bc58148c.js"></script>
 </body>
+
 </html>
