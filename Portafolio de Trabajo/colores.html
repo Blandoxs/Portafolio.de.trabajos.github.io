@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Explorer</title>
+    <style>
+        body {
+            background-color: #b0e0e6;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .color-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: row-reverse;
+        }
+        .color-picker {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+        }
+        #selected-color {
+            color: #FF0000;
+        }
+        #rgb-value {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        /* Otros estilos pueden permanecer sin cambios */
+    </style>
+</head>
+<body>
+    <div class="color-container">
+        <div class="color-info">
+            <h2>Color seleccionado: <span id="selected-color">#FF0000</span></h2>
+            <p id="rgb-value">RGB: <span id="rgb"></span></p>
+        </div>
+        <div class="color-picker">
+            <label for="color-input">Selecciona un color:</label>
+            <input type="color" id="color-input" class="color-input" value="#FF0000" autofocus>
+        </div>
+    </div>
+    <script>
+        const colorInput = document.getElementById("color-input");
+        const selectedColor = document.getElementById("selected-color");
+        const rgbValue = document.getElementById("rgb");
+
+        colorInput.addEventListener("input", function() {
+            const color = colorInput.value;
+
+            selectedColor.textContent = color;
+            rgbValue.textContent = hexToRgb(color);
+        });
+
+        function hexToRgb(hex) {
+            const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+            hex = hex.replace(shorthandRegex, function(_, r, g, b) {
+                return r + r + g + g + b + b;
+            });
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            const r = parseInt(result[1], 16);
+            const g = parseInt(result[2], 16);
+            const b = parseInt(result[3], 16);
+            return `(${r}, ${g}, ${b})`;
+        }
+    </script>
+</body>
+</html>
