@@ -7,44 +7,54 @@
         body {
             text-align: center;
             background-color: #000000;
-              
+            color: #fff;
+            margin: 0;
         }
 
         h1 {
-            color: #fff;
             font-family: 'Courier New', Courier, monospace;
             font-style: italic;
-          }
-          h2 {
-            color: #fff;
+            margin-top: 20px; /* Añade un margen superior */
+            margin-bottom: 10px; /* Añade un margen inferior */
+        }
+
+        h2 {
             font-family: Algerian;
             font-size: 72px;
-            font-weight: bold;  
-          }
+            font-weight: bold;
+            margin-bottom: 20px; /* Añade un margen inferior */
+        }
 
         .image-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Cambia el número de columnas según tus necesidades */
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Aumenta el espacio entre las imágenes */
+            margin: 20px auto; /* Añade un margen alrededor del contenedor y lo centra */
         }
 
         .image-item {
             width: 100%;
             height: 0;
-            padding-bottom: 100%; /* Esto asegura que las imágenes se mantengan cuadradas */
+            padding-bottom: 100%;
             position: relative;
+            background-color: #ffffff; /* Fondo blanco alrededor de cada imagen */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden; /* Asegura que no haya desbordamiento de contenido */
         }
 
         .image-item img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 95%; /* Ajusta el tamaño de la imagen al 90% del contenedor */
+            height: 95%; /* Ajusta la altura de la imagen al 90% del contenedor */
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
         }
     </style>
 </head>
 <body>
+
     <h2>Diseños 3D</h2>
 
     <h1>Oruga</h1>
@@ -59,30 +69,37 @@
             <img src="Oruga Pin2.PNG" alt="Imagen 3">
         </div>
     </div>
+
     <h1>Copa</h1>
     <div class="image-container">
         <div class="image-item">
             <img src="Copa.PNG" alt="Imagen 4">
         </div>
         <div class="image-item">
-            <img src="CopaFal.PNG" alt="Imagen 5">
+            <img src="Copa2.PNG" alt="Imagen 5">
         </div>
         <div class="image-item">
-            <img src="CopaFalt.PNG" alt="Imagen 6">
+            <img src="Copa3.PNG" alt="Imagen 6">
         </div>
     </div>
+
+    <!-- Repite la estructura para las otras categorías -->
+
+
+
     <h1>Mesa</h1>
     <div class="image-container">
         <div class="image-item">
             <img src="Mesa.PNG" alt="Imagen 7">
         </div>
         <div class="image-item">
-            <img src="MesaFalt.PNG" alt="Imagen 8">
+            <img src="Mesa1.PNG" alt="Imagen 8">
         </div>
         <div class="image-item">
             <img src="Mesa2.PNG" alt="Imagen 9">
         </div>
     </div>
+
     <h1>Sombrero</h1>
     <div class="image-container">
         <div class="image-item">
@@ -95,18 +112,20 @@
             <img src="Sombrero.PNG" alt="Imagen 12">
         </div>
     </div>
+
     <h1>Bloque De Colores</h1>
     <div class="image-container">
         <div class="image-item">
             <img src="Bloque.PNG" alt="Imagen 13">
         </div>
         <div class="image-item">
-            <img src="CuboFal.PNG" alt="Imagen 14">
+            <img src="Cubo.PNG" alt="Imagen 14">
         </div>
         <div class="image-item">
             <img src="Bloq.PNG" alt="Imagen 15">
         </div>
     </div>
+
     <h1>Casco</h1>
     <div class="image-container">
         <div class="image-item">
@@ -116,9 +135,73 @@
             <img src="Casco1.PNG" alt="Imagen 17">
         </div>
         <div class="image-item">
-            <img src="CascoFalt.PNG" alt="Imagen 18">
+            <img src="CascoDor.PNG" alt="Imagen 18">
         </div>
     </div>
+    
+        </div>
+    <h1>Logo Blender</h1>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="Logo1.PNG" alt="Imagen 16">
+        </div>
+        <div class="image-item">
+            <img src="Logo6.PNG" alt="Imagen 17">
+        </div>
+        <div class="image-item">
+            <img src="Logo3.PNG" alt="Imagen 18">
+        </div>
+    </div>
+
+    <h1>Peinado</h1>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="Pelo1.PNG" alt="Imagen 16">
+        </div>
+        <div class="image-item">
+            <img src="Pelo3.PNG" alt="Imagen 17">
+        </div>
+        <div class="image-item">
+            <img src="PeloCapa.PNG" alt="Imagen 18">
+        </div>
+    </div>
+</div>
+<h1>Mesa de Billar</h1>
+<div class="image-container">
+    <div class="image-item">
+        <img src="Billar1.PNG" alt="Imagen 16">
+    </div>
+    <div class="image-item">
+        <img src="Billa2.PNG" alt="Imagen 17">
+    </div>
+    <div class="image-item">
+        <img src="Billa3.PNG" alt="Imagen 18">
+</div>
+</div>
+<h1>Espejo</h1>
+<div class="image-container">
+    <div class="image-item">
+        <img src="piso1.PNG" alt="Imagen 16">
+    </div>
+    <div class="image-item">
+        <img src="piso2.PNG" alt="Imagen 17">
+    </div>
+    <div class="image-item">
+        <img src="piso3.PNG" alt="Imagen 18">
+</div>
+</div>
+<h1>Textura</h1>
+<div class="image-container">
+    <div class="image-item">
+        <img src="Tex1.PNG" alt="Imagen 16">
+    </div>
+    <div class="image-item">
+        <img src="Tex2.PNG" alt="Imagen 17">
+    </div>
+    <div class="image-item">
+        <img src="Tex3.PNG" alt="Imagen 18">
+</div>
+    
     <!-- Agrega más elementos .image-item y títulos según sea necesario -->
 </body>
 </html>
