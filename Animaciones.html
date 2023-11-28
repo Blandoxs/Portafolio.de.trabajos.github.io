@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta content="IE=edge" http-equiv="X-UA-Compatible">
+ <meta content="width=device-width,initial-scale=1" name="viewport">
+ <title>Video Example</title>
+ <style>
+    body {
+      margin: 20px;
+      background-color: #f0f0f0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .video-container {
+      background-color: #000000;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+    }
+ </style>
+</head>
+
+<body>
+ <script>
+    const videoList = [
+      "Mantel.mkv",
+      "Pelo Azul.mkv",
+      "CD.mkv",
+      "video4.mp4"
+    ];
+
+    for (let i = 0; i < videoList.length; i++) {
+      const container = document.createElement("div");
+      container.className = "video-container";
+
+      const video = document.createElement("video");
+      video.controls = true;
+      video.autoplay = true;
+
+      const source = document.createElement("source");
+      source.src = videoList[i];
+      source.type = "video/mp4";
+
+      video.appendChild(source);
+      container.appendChild(video);
+
+      document.body.appendChild(container);
+    }
+ </script>
+</body>
+
+</html>
