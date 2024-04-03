@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Evento Prenacional</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <style>
+        /* Agrega estilos CSS personalizados aquí */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+         .espacio {
+             padding: 100px; /* Agrega 20px de espacio en todos los lados del div */
+         }
+            .barra-horizontal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px; /* Grosor de la barra */
+            background-color: black;
+        }
+            .logo {
+            position: absolute;
+            top: -40px;
+            left: -100px;
+            margin: 10px;
+            }
+         .imagen-general {
+            width: 300px; /* Ancho de la imagen */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        .container-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .content-box {
+            display: flex;
+            align-items: center;
+            width: 90%; /* Cambiar el ancho según sea necesario */
+            margin: auto;
+        }
+
+        .info-box {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+            width: 100px; /* Ancho del mapa */
+            height: 565px; /* Alto del mapa */
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<header>
+   <!-- header inner -->
+   <div class="header">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="#" style="width: 150px; height: auto;" /></a>
+                    </div>
+                    
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+               <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="disiplinas.html">Disiplinas</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="participantes.html">Participantes</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="turisticos.html">Lugares Turisticos</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="resumen.html">Resumen</a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<div class="espacio"></div>
+
+<body>
+    <!-- Contenido principal -->
+    <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <div class="barra-horizontal"></div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="content-box">
+            <!-- Información a la izquierda -->
+            <div class="info-box">
+               <h2>Información</h2>
+               <p>El 20 de julio de 1923 el General Villa dirigiéndose a Canutillo, Dgo., pasa enfrente de este edificio, desde donde disparan los asesinos, dejando muertos al General Villa, a su secretario el coronel Trillo y algunos integrantes de su escolta. Este museo resguarda Fotografías, documentos y artículos relacionados a Francisco Villa.</p>
+               <p><strong>HORARIO:</strong> 10:00 AM a 5:00 PM, de lunes a domingo</p>
+               <p><strong>COSTO:</strong> $44.00 adultos</p>
+               <p><strong>TELÉFONO:</strong> 627 52 5 44 00</p>
+               <img class="imagen-museo" src="images/tec.jpg" alt="Imagen del museo">
+               
+            </div>
+            <!-- Mapa a la derecha -->
+            <div class="map-container">
+                <!-- Mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14228.137751705213!2d-105.6800768!3d26.934122699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694514b79d4c1df%3A0x9050e52f6cc6fa7d!2sLa%20Casa%20del%20General%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2smx!4v1711755102503!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fin del contenido principal -->
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery para fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        // Mostrar el mapa al hacer clic en la imagen
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                'width': '95%',
+                'height': '95%',
+                'autoScale': true,
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'type': 'inline',
+                'speedIn': 600,
+                'speedOut': 200,
+                'hideOnContentClick': false,
+                'showCloseButton': true,
+                'overlayOpacity': 0.8
+            });
+        });
+    </script>
+</body>
+</html>
