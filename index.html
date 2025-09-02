@@ -1,424 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Heredia - Portfolio</title>
+    <title>Daniel Heredia - Portafolio Profesional</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary-color: #6a11cb;
-            --secondary-color: #2575fc;
-            --text-color-light: #f3f4f6;
-            --text-color-dark: #1f2937;
-            --bg-color-dark: #111827;
-            --card-bg-dark: #1f2937;
-            --accent-color: #4ade80;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-color-light);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
         }
-
-        .dark-mode {
-            background: linear-gradient(135deg, #000000, #434343);
-            color: var(--text-color-light);
-        }
-
-        body, html {
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            padding: 6rem 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        header h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            margin: 0;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        header p {
-            font-size: clamp(1rem, 2vw, 1.5rem);
-            font-weight: 300;
-            color: rgba(255,255,255,0.9);
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: scale(1.2);
-        }
-
-        .section {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 1.5rem;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
-            font-size: clamp(1.75rem, 3vw, 2.5rem);
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 2rem;
-            color: var(--accent-color);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .project-card {
-            background-color: rgba(0,0,0,0.2);
-            border-radius: 1rem;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .section-title {
             position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1f2937;
         }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 4rem;
+            height: 4px;
+            background-color: #ef4444;
+            border-radius: 9999px;
         }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 0.75rem;
-            margin-bottom: 1.5rem;
+        .card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
         }
-
-        .project-card h3 {
-            font-size: clamp(1.25rem, 2vw, 1.75rem);
-            font-weight: 600;
-            color: white;
-            margin-top: 0;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-            text-align: center;
-        }
-
-        .skill-item {
-            background-color: rgba(0,0,0,0.3);
-            padding: 1rem;
-            border-radius: 0.75rem;
-            transition: background-color 0.3s;
-            font-weight: 500;
-        }
-
-        .skill-item:hover {
-            background-color: var(--accent-color);
-            color: var(--text-color-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .contact-form input, .contact-form textarea {
-            background-color: rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            width: 100%;
-            transition: border-color 0.3s;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .btn {
-            background: var(--accent-color);
-            color: var(--text-color-dark);
-            padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            border: none;
+        .experience-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
         }
-
-        .btn:hover {
-            background-color: #38a169;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
-        .project-image-placeholder {
-            width: 100%;
-            height: 250px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.6);
-            border: 2px dashed rgba(255,255,255,0.3);
+        .cta-button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .cta-button:hover {
+            transform: scale(1.05);
         }
-
-        @media (min-width: 768px) {
-            .projects-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.75rem;
             }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header Section -->
-    <header class="container">
-        <h1>Daniel Heredia</h1>
-        <p>Computer Systems Engineer | Full-Stack Developer</p>
-        <div class="mt-8 flex justify-center gap-6">
-            <a href="https://www.linkedin.com/in/daniel-heredia-a57762275/" target="_blank" class="hover:scale-110 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.767 1.75-1.767 1.75.79 1.75 1.767c0 .976-.784 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
-            <a href="mailto:danyhere516@gmail.com" class="hover:scale-110 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 12.713l-12 7.287v-20h24v20l-12-7.287zm-11 6.287v-1.854l11-6.697 11 6.697v1.854l-11-6.657-11 6.657z"/>
-                </svg>
-            </a>
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-red-500 to-yellow-500 text-white py-20 md:py-32 flex flex-col items-center text-center px-4 rounded-b-[3rem] shadow-xl">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Hola, soy Daniel Heredia.</h1>
+            <p class="mt-4 text-lg md:text-xl font-medium">Ingeniero en Sistemas Computacionales | Especialista en Desarrollo Web y Móvil</p>
+            <p class="mt-6 max-w-2xl mx-auto text-base md:text-lg opacity-90">Estudiante proactivo y detallista con experiencia en desarrollo web full-stack, aplicaciones móviles y gestión de e-commerce. Mi pasión es crear soluciones digitales eficientes y fáciles de usar.</p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#proyectos" class="cta-button bg-white text-red-500 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100">Ver Portafolio</a>
+                <a href="https://google.com" target="_blank" class="cta-button bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-red-500">Descargar CV</a>
+            </div>
         </div>
     </header>
 
     <!-- About Me Section -->
-    <main class="container">
-        <section id="about-me" class="section">
-            <div class="flex justify-between items-center mb-6">
-                <h2>About Me</h2>
-                <button id="generate-profile-btn" class="btn">✨ Generate Profile Description</button>
-            </div>
-            <p id="profile-text" class="text-center md:text-left">I am a proactive Computer Systems Engineer with a passion for developing technological solutions. My experience ranges from full-stack web development and mobile applications to e-commerce platform management. I have skills in multiple programming languages such as C#, Java, and Python, and a strong inclination towards creativity in video game development and virtual reality experiences. I am a fast learner and easily adapt to new technologies and challenges.</p>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <p>Insert Image Here</p>
-                    </div>
-                    <h3>E-Commerce Manager at Axis 3D</h3>
-                    <p id="project-desc-1">I managed and optimized the e-commerce platform for Axis 3D, achieving a 50% increase in online sales. I led the store's redesign and development, implementing a modern interface and a secure backend structure. My focus on database management and performance monitoring was key to ensuring the platform's reliability and business growth.</p>
-                    <button class="btn mt-4 generate-project-btn" data-project-id="1">✨ Generate Detailed Description</button>
+    <section id="about" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="section-title text-center mx-auto mb-12">Acerca de Mí</h2>
+            <div class="md:flex md:items-center md:space-x-12 card">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2940&auto=format&fit=crop" alt="Persona escribiendo código en una computadora" class="rounded-3xl shadow-lg w-full h-auto">
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <p>Insert Image Here</p>
-                    </div>
-                    <h3>Mobile Application Developer (ChemData)</h3>
-                    <p id="project-desc-2">I led the full-cycle development of ChemData, a mobile application for chemistry students, providing essential calculations and tools. I created and implemented the application from scratch, ensuring an intuitive interface and stable performance. I applied full-cycle development practices, resulting in a reliable and educational tool tailored to academic needs.</p>
-                    <button class="btn mt-4 generate-project-btn" data-project-id="2">✨ Generate Detailed Description</button>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <p>Insert Image Here</p>
-                    </div>
-                    <h3>Web Developer (Turismo Parral)</h3>
-                    <p id="project-desc-3">I developed a responsive website to promote tourism in Parral. I integrated interactive maps, event calendars, and SEO optimization to boost visitor engagement and support the local economy.</p>
-                    <button class="btn mt-4 generate-project-btn" data-project-id="3">✨ Generate Detailed Description</button>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-placeholder">
-                        <p>Insert Image Here</p>
-                    </div>
-                    <h3>Virtual Reality Experiences</h3>
-                    <p id="project-desc-4">I have hands-on experience in the design and development of virtual reality experiences, combining my technical skills with a creative vision to build immersive and interactive environments. My passion for game design extends to creating virtual worlds that capture users' imagination.</p>
-                    <button class="btn mt-4 generate-project-btn" data-project-id="4">✨ Generate Detailed Description</button>
+                <div class="md:w-1/2">
+                    <p class="text-lg leading-relaxed">Soy un estudiante de Ingeniería en Sistemas Computacionales de Parral, Chihuahua. Mi trayectoria se centra en la innovación y la aplicación de mis conocimientos para generar un impacto positivo. Cuento con dominio de lenguajes como **C#, C++, Java, Python, HTML, CSS, JavaScript** y bases de datos **SQL/NoSQL**.</p>
+                    <p class="mt-4 text-lg leading-relaxed">Me adapto rápidamente a las nuevas tecnologías y soy creativo en el desarrollo de soluciones, desde el diseño de videojuegos hasta la gestión de plataformas de e-commerce. Mi enfoque es transformar desafíos en soluciones eficientes y escalables.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">C#, C++, Java, Python</div>
-                <div class="skill-item">HTML, CSS, JavaScript</div>
-                <div class="skill-item">SQL, NoSQL</div>
-                <div class="skill-item">Unity 3D</div>
-                <div class="skill-item">Frontend & Backend Dev</div>
-                <div class="skill-item">Git, GitHub</div>
-                <div class="skill-item">UX/UI Design</div>
-                <div class="skill-item">Virtual Reality</div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p class="text-center">If you want to collaborate or have any questions, feel free to contact me.</p>
-            <form action="mailto:danyhere516@gmail.com" method="post" enctype="text/plain" class="mt-8 contact-form">
-                <label for="name" class="block text-sm font-medium">Name</label>
-                <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md" required>
-
-                <label for="email" class="block text-sm font-medium">Email</label>
-                <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md" required>
-
-                <label for="message" class="block text-sm font-medium">Message</label>
-                <textarea id="message" name="message" rows="5" class="mt-1 block w-full rounded-md" required></textarea>
-
-                <div class="text-center mt-6">
-                    <button type="submit" class="btn">Send Message</button>
+    <!-- Experience Section -->
+    <section id="experiencia" class="py-16 md:py-24 px-4 bg-gray-200">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="section-title text-center mx-auto mb-12">Experiencia Profesional</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Axis 3D Experience -->
+                <div class="experience-card card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2940&auto=format&fit=crop" alt="E-commerce de Axis 3D" class="rounded-2xl mb-6 w-full h-48 object-cover">
+                    <h3 class="text-xl md:text-2xl font-bold">E-Commerce Manager</h3>
+                    <p class="text-red-500 font-semibold mt-1">Axis 3D</p>
+                    <p class="text-sm text-gray-500">Feb 2025 - Presente</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700">
+                        <li>Logré un **aumento del 50% en ventas en línea** a través de la optimización de la plataforma.</li>
+                        <li>Lideré el rediseño completo de la tienda online para una mejor experiencia de usuario.</li>
+                    </ul>
                 </div>
-            </form>
-        </section>
-    </main>
+
+                <!-- ChemData Experience -->
+                <div class="experience-card card">
+                    <img src="https://images.unsplash.com/photo-1517420887309-8806297ce6f4?q=80&w=2940&auto=format&fit=crop" alt="Aplicación móvil ChemData" class="rounded-2xl mb-6 w-full h-48 object-cover">
+                    <h3 class="text-xl md:text-2xl font-bold">Desarrollador de Aplicaciones Móviles</h3>
+                    <p class="text-red-500 font-semibold mt-1">ChemData</p>
+                    <p class="text-sm text-gray-500">Feb 2023 - Ago 2024</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700">
+                        <li>Lideré el desarrollo integral de la aplicación **ChemData** para estudiantes de química.</li>
+                        <li>Implementé el diseño y la funcionalidad desde cero, asegurando una interfaz intuitiva y estable.</li>
+                    </ul>
+                </div>
+
+                <!-- Turismo Parral Experience -->
+                <div class="experience-card card">
+                    <img src="https://images.unsplash.com/photo-1517374737243-706037e23b2d?q=80&w=2940&auto=format&fit=crop" alt="Sitio web de Turismo Parral" class="rounded-2xl mb-6 w-full h-48 object-cover">
+                    <h3 class="text-xl md:text-2xl font-bold">Desarrollador Web</h3>
+                    <p class="text-red-500 font-semibold mt-1">Turismo Parral</p>
+                    <p class="text-sm text-gray-500">Enero 2025 - Presente</p>
+                    <ul class="list-disc list-inside mt-4 text-gray-700">
+                        <li>Desarrollé un sitio web responsivo para promover el turismo, destacando sitios históricos y eventos.</li>
+                        <li>Integré mapas interactivos y SEO para mejorar el compromiso de los visitantes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="habilidades" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="section-title text-center mx-auto mb-12">Habilidades y Certificaciones</h2>
+            <div class="card p-8">
+                <div class="flex flex-wrap gap-x-8 gap-y-4 justify-center text-lg md:text-xl font-medium">
+                    <!-- Technical Skills -->
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">HTML/CSS/JS</div>
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">Python</div>
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">C#/C++</div>
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">Java</div>
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">SQL/NoSQL</div>
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">Unity 3D</div>
+                    <div class="bg-red-500 text-white py-2 px-6 rounded-full shadow-md">Git/GitHub</div>
+                </div>
+                <div class="mt-8 text-center text-gray-700 leading-relaxed">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Certificaciones Clave</h3>
+                    <p>
+                        Certificación en **Derechos de Propiedad Intelectual** (IMPI)
+                    </p>
+                    <p>
+                        Certificación en **Fundamentos de Cloud Computing**
+                    </p>
+                    <p>
+                        **Programador PHP** (Programación Orientada a Objetos)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 md:py-24 px-4 bg-gray-200 rounded-t-[3rem] shadow-xl">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="section-title mx-auto mb-12">Contáctame</h2>
+            <div class="card p-8 md:p-12">
+                <p class="text-lg mb-6">Estoy siempre abierto a nuevas oportunidades. No dudes en contactarme para discutir cómo puedo ayudarte a transformar tus ideas en realidad.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <a href="mailto:danyhere516@gmail.com" class="bg-red-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-red-600 w-full md:w-auto">Enviar Email</a>
+                    <a href="https://www.linkedin.com/in/daniel-heredia-a57762275/" target="_blank" class="bg-red-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-red-600 w-full md:w-auto">Ver LinkedIn</a>
+                </div>
+                <p class="mt-8 text-gray-600">Email: danyhere516@gmail.com</p>
+                <p class="mt-2 text-gray-600">Teléfono: +526491968052</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center py-6 text-sm text-gray-400">
-        <p>&copy; 2025 Daniel Heredia. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center px-4 rounded-t-xl">
+        <p>&copy; 2025 Daniel Heredia. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const projects = {
-                1: {
-                    title: "E-Commerce Manager at Axis 3D",
-                    description: "I managed and optimized the e-commerce platform for Axis 3D, achieving a 50% increase in online sales. I led the store's redesign and development, implementing a modern interface and a secure backend structure. My focus on database management and performance monitoring was key to ensuring the platform's reliability and business growth."
-                },
-                2: {
-                    title: "Mobile Application Developer (ChemData)",
-                    description: "I led the full-cycle development of ChemData, a mobile application for chemistry students, providing essential calculations and tools. I created and implemented the application from scratch, ensuring an intuitive interface and stable performance. I applied full-cycle development practices, resulting in a reliable and educational tool tailored to academic needs."
-                },
-                3: {
-                    title: "Web Developer (Turismo Parral)",
-                    description: "I developed a responsive website to promote tourism in Parral. I integrated interactive maps, event calendars, and SEO optimization to boost visitor engagement and support the local economy."
-                },
-                4: {
-                    title: "Virtual Reality Experiences",
-                    description: "I have hands-on experience in the design and development of virtual reality experiences, combining my technical skills with a creative vision to build immersive and interactive environments. My passion for game design extends to creating virtual worlds that capture users' imagination."
-                }
-            };
-
-            const skills = [
-                "Computer Systems Engineer",
-                "Full-Stack Developer",
-                "C#, C++, Java, Python",
-                "HTML, CSS, JavaScript",
-                "SQL, NoSQL",
-                "Unity 3D",
-                "Frontend & Backend Development",
-                "Git, GitHub",
-                "UX/UI Design",
-                "Virtual Reality"
-            ];
-
-            const generateText = async (prompt) => {
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-                const payload = {
-                    contents: [{ parts: [{ text: prompt }] }],
-                    tools: [{ "google_search": {} }],
-                    systemInstruction: {
-                        parts: [{ text: "You are a professional portfolio writer. Your task is to write a detailed, professional, and engaging description based on the provided text. The description should be about 2-3 paragraphs long. Do not include a title." }]
-                    },
-                };
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                
-                const result = await response.json();
-                const candidate = result.candidates?.[0];
-
-                if (candidate && candidate.content?.parts?.[0]?.text) {
-                    return candidate.content.parts[0].text;
-                } else {
-                    console.error('Failed to generate content:', result);
-                    return 'Failed to generate content.';
-                }
-            };
-
-            const generateProfileBtn = document.getElementById('generate-profile-btn');
-            const profileText = document.getElementById('profile-text');
-
-            generateProfileBtn.addEventListener('click', async () => {
-                profileText.textContent = "Generating...";
-                const prompt = `Based on the following skills: ${skills.join(', ')} and experience as E-Commerce Manager, Mobile Application Developer, and Web Developer, please write a new professional profile summary for a portfolio website.`;
-                const newText = await generateText(prompt);
-                profileText.textContent = newText;
-            });
-
-            document.querySelectorAll('.generate-project-btn').forEach(button => {
-                button.addEventListener('click', async (event) => {
-                    const projectId = event.target.dataset.projectId;
-                    const project = projects[projectId];
-                    const projectDescElement = document.getElementById(`project-desc-${projectId}`);
-                    
-                    projectDescElement.textContent = "Generating...";
-                    
-                    const prompt = `Write a detailed, professional description for a portfolio project titled "${project.title}" with the following initial description: "${project.description}".`;
-                    const newText = await generateText(prompt);
-                    projectDescElement.textContent = newText;
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>
